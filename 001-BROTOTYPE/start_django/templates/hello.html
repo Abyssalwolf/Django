@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    {% for movie_obj in movies %}
+        <h1>Title : {{movie_obj.title | upper}}</h1>
+        <h3>Subheading : {{movie_obj.sub | default:'Nothing hai'}}</h3>
+        <p>Summary : {{movie_obj.sum | default:'Nothing hai'}}</p>
+        {% if movie_obj.success %}
+        <p>Movie was a success</p>
+        {% else %}
+        <p>Movie was not a success</p>
+        {% endif %}
+    {% endfor %}
+</body>
+</html>
