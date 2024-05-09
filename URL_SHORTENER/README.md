@@ -4,7 +4,7 @@
 
 Its objectives to be followed are as follows
 
-Your task is to create a URL shortener web application that includes the following features:
+The task is to create a URL shortener web application that includes the following features:
 
 1. **URL Shortening:**
     - Users can input long URLs and receive shortened versions.
