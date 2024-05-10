@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Shorten Your URL</h1>
+    <form method="POST">
+        {% csrf_token %}
+        {{ form.as_p }}
+        <button type="submit">Shorten URL</button>
+    </form>
+    {% if form.is_valid %}
+        <p>Your shortened URL is: <a href="{% url 'shortened_url' short_code=new_url.short %}">{{ new_url.short }}</a></p>
+    {% endif %}
+</body>
+</html>
