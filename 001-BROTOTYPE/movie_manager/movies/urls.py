@@ -21,5 +21,6 @@ urlpatterns = [
     path('create/', views.create, name='create'),
     path('edit/', views.edit,name='edit'),
     path('listmovies/', views.list, name='list'),
+    path('', views.list, name='list'),
 
 ]

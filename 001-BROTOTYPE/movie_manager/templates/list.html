@@ -6,8 +6,16 @@
     <title>Document</title>
 </head>
 <body>
+    {% include 'menu.html' %}
+    
     <h1>List movies</h1>
 
-    {% include 'menu.html' %}
+    {% for movie_obj in movies %}
+        <h1>Title : {{movie_obj.title | upper}}</h1>
+        <h3>Subheading : {{movie_obj.sub | default:'Nothing hai'}}</h3>
+        <p>Summary : {{movie_obj.sum | default:'Nothing hai'}}</p>
+    {% endfor %}
+
+    
 </body>
 </html>
